@@ -66,5 +66,16 @@ Hand data --> Youtube videos -->skeleton or extraction of the hand pose
 Retargeted to a particular hand
 Motion is transferred. However, there are some limitations, the motion transfer process is not very accurate. Linear interpolation is used to retarget the data mismatch. say between 5 fingers captured to 3 fingers. 
 
+### To prevent occulusion in hand tracking
+MVHM: A Large-Scale Multi-View Hand Mesh Benchmark for Accurate 3D Hand Pose Estimation
 
+- used a larger dataset along with more than a single camera to track the motion of hand
+- available Mano Dataset for hands
+
+### ViViDex: Learning Vision-based Dexterous Manipulation from Human Videos
+- Available tool for extraction of hand only from the entire video: Reference trajectory extraction
+- Code for hand motion extraction is available 
+
+## Open source VR Hand projects:
+- $250 : https://www.eozvr.com/products/eoz-immersive-vr-gloves?srsltid=AfmBOoriUfFDi_kDJgRAkE9l_D-nbFwH4wtbolGr-Dxmjl3Zru7tkuHa
 
