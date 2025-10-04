@@ -1,4 +1,4 @@
-## Notes
+# Notes
 CoRL Day 1
 Interesting talks/Food for thought. 
 
@@ -12,7 +12,7 @@ Interesting talks/Food for thought.
 3. A Low Cost Modular Actuator for Dynamic Robots by Benjamin G. Katz
 
 
-## Talk by Samsung Head of Robotics
+## Talk by Samsung Head of Robotics (limit sharing since corporate interest conflict)
 
 - Flashback of early stage robotics competitions such as DARPA challenge. COntrolled using specific joint controls instead of modern day reinforcement learning. Won but a lot of the motion was teleoperated. Other sensors used were computer vision. 
 -  Growing uncertainity of the future of humanoids, direction focus, application areas, Uniformity. Called for some kind of standardisation
@@ -20,17 +20,42 @@ Interesting talks/Food for thought.
 - Need some sort of generalized world models 
 
 
-Reviewed Papers
+# Reviewed Papers
 
-- Sound of simulation: Using sound as a modality the robots are able to better learn tasks, such a pouring water in a dark room. Vision language action sound model. Used clip with spectrogram. 
+## Sound of simulation 
+- Using sound as a modality the robots are able to better learn tasks, such a pouring water in a dark room. Vision language action sound model. Used clip with spectrogram. 
 
 Link: https://multigen-audio.github.io/  CODE available as well
 
--
+## DexSkin: High-Coverage Conformable Robotic Skin for Learning Contact-Rich Manipulation
+
+https://www.arxiv.org/abs/2509.18830
+-no code
+
+- Grasping objects by robots is now primarily done through without using any force feedback. Without this, the fingers are unable to determine how much squeeezing should happen. 
+- Overtime wear, difference between different robots hardware, prevent reusing the same force information. 
+- If squeezed much, the object could potentially crack or break. 
+- Development of a tactile feedback strip which is based on the measure of capacitance- gap between the electrode plates. 
 
 
+## Research attempt and trial
+Attempted to create a pipeline which taken in youtube videos of FPV say cooking, instrument playing etc. Uses hand pose estimation NN --> extracts the 5 and multi bone digit hand finger estimates --> applies or retargets to a hand URDF on simulation. 
 
+## Bottlenecks:
+- Hand First Person view videos are limited in number. 
+- Retageting is not accurate or the approximation is not great. Human hand is 5 fingers whereas the hand of several of the devices used are in 3 or 4 fingers. 
+### Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations
+- Reinforcement learning has been used in the past to train objects to perform certain tasks. Just using RL has shown the grasping etc is unlike typical of human movement or motion. Demonstration using human motion capture is used as teacher/priviledged information. 
 
+## Code run
+# GeoRT
+https://github.com/skr3178/GeoRT
+
+- Instead of allegro hand, a different kind of hand was used for retargeting purposes. Hand was Unitree 5 finger and 3 finger hands. 
+Facing issues of segmentation. 
+
+- GeoRT: uses a finger to finger retargeting as well as the wrist tracking for effectiveness. 
+- Key is to map the entire C-shape and the motion of the hand in proper direction.
 
 
 CoRL Day 2
